@@ -1,4 +1,6 @@
 #include <iostream>
+#include <stdio.h> 
+#include <stdlib.h> 
 
 class Node {                            //might use this later
     public:
@@ -10,8 +12,9 @@ class Node {                            //might use this later
         ~Node();
 
         int GetData();
+        void SetData(int data);
         Node *GetNext();
-        void SetNext(Node *head);               // not in spec, this doesn't seem legal
+        void SetNext(Node *nextNode);               // not in spec, this doesn't seem legal
     private:
         int data;
         Node *next;

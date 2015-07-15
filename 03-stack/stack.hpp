@@ -21,4 +21,6 @@ class Stack {
     private:
         int *data;
         int size;
+        int capacity;
 };
+        
