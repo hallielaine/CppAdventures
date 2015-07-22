@@ -11,9 +11,9 @@ class Node {                            //might use this later
         Node& operator = (const Node& ref);     // overload operator, not included in spec
         ~Node();
 
-        int GetData();
+        int GetData() const;
         void SetData(int data);
-        Node *GetNext();
+        Node *GetNext() const;
         void SetNext(Node *nextNode);               // not in spec, this doesn't seem legal
     private:
         int data;
@@ -26,9 +26,12 @@ class LinkedList {                 // a list of integers
         LinkedList(const LinkedList& ref);
         LinkedList& operator = (const LinkedList& ref);
         ~LinkedList();
-
+        
+        bool isEmpty() const;
+        Node GetHead();
         void Add(Node *node);
         void PrintList();
     private:
-        Node *head;
+        Node head;     // changed to actual Node type
+        bool empty;
     };
